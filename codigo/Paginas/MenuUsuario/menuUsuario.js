@@ -1,6 +1,6 @@
-const JSON_SERVER_URL_EMPREGADORES = 'http://localhost:3000/empregadores';
-const JSON_SERVER_URL_FREELANCERS = 'http://localhost:3000/freelancers';
-const JSON_SERVER_URL_ADMIN = 'http://localhost:3000/admin';
+const JSON_SERVER_URL_EMPREGADORES = 'https://json-uai-jobs.vercel.app/empregadores';
+const JSON_SERVER_URL_FREELANCERS = 'https://json-uai-jobs.vercel.app/freelancers';
+const JSON_SERVER_URL_ADMIN = 'https://json-uai-jobs.vercel.app/admin';
 
 document.addEventListener('DOMContentLoaded', () => {
     carregaDadosUsuarioCorrente();
@@ -115,7 +115,7 @@ function salvaNovosDados(){
         usuarioAtualizado.vagasPublicadas = userData.vagasPublicadas;
     }
 
-    axios.put(`http://localhost:3000/${urltipo}/${userData.id}`, usuarioAtualizado)
+    axios.put(`https://json-uai-jobs.vercel.app/${urltipo}/${userData.id}`, usuarioAtualizado)
         .then(response => {
             console.log('Dados do usuário atualizados com sucesso no servidor:', response.data);
             localStorage.setItem('UsuarioCorrente', JSON.stringify(usuarioAtualizado));
