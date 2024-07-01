@@ -1,4 +1,4 @@
-JSON_SERVER_URL_FREELANCERS =  'http://localhost:3000/freelancers'
+JSON_SERVER_URL_FREELANCERS =  'https://json-uai-jobs.vercel.app/freelancers'
 let freelancers = [];
 let filteredItems = [];
 let currentPage = 1;
