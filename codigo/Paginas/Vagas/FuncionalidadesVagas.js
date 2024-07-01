@@ -17,7 +17,7 @@ let filters = {
 // Função que carrega as vagas do JSON-Server na página
 document.addEventListener("DOMContentLoaded", function () {
     const vagasContainer = document.getElementById('container-vagas-abertas');
-    const JSON_SERVER_URL_VAGAS = 'http://localhost:3000/vagas';
+    const JSON_SERVER_URL_VAGAS = 'https://json-uai-jobs.vercel.app/vagas';
 
     // Verifique se axios está disponível
     if (typeof axios === 'undefined') {
@@ -551,9 +551,9 @@ async function retirarCandidatura(vagaId) {
 }
 
 // Página de publicar vagas
-const JSON_SERVER_URL_VAGAS = 'http://localhost:3000/vagas';
-const JSON_SERVER_URL_EMPREGADORES = 'http://localhost:3000/empregadores';
-const JSON_SERVER_URL_FREELANCERS = 'http://localhost:3000/freelancers';
+const JSON_SERVER_URL_VAGAS = 'https://json-uai-jobs.vercel.app/vagas';
+const JSON_SERVER_URL_EMPREGADORES = 'https://json-uai-jobs.vercel.app/empregadores';
+const JSON_SERVER_URL_FREELANCERS = 'https://json-uai-jobs.vercel.app/freelancers';
 
 // Função para buscar o endereço pelo CEP
 async function buscarEnderecoPorCEP(cep) {
@@ -857,9 +857,9 @@ document.addEventListener("DOMContentLoaded", function () {
 //Tipo de vaga que vai ser exibida
 document.addEventListener("DOMContentLoaded", async function () {
     const vagasContainer = document.getElementById('Vagas-candidatada-postada');
-    const JSON_SERVER_URL_VAGAS = 'http://localhost:3000/vagas';
-    const JSON_SERVER_URL_EMPREGADORES = 'http://localhost:3000/empregadores';
-    const JSON_SERVER_URL_FREELANCERS = 'http://localhost:3000/freelancers';
+    const JSON_SERVER_URL_VAGAS = 'https://json-uai-jobs.vercel.app/vagas';
+    const JSON_SERVER_URL_EMPREGADORES = 'https://json-uai-jobs.vercel.app/empregadores';
+    const JSON_SERVER_URL_FREELANCERS = 'https://json-uai-jobs.vercel.app/freelancers';
 
     const usuarioCorrente = JSON.parse(localStorage.getItem('UsuarioCorrente'));
 
