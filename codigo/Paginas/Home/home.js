@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Construção dinâmica do carrossel para 3 feedbacks por vez
 function mostraFeedbacks() {
-    axios.get('http://localhost:3000/feedbacks')
+    axios.get('https://json-uai-jobs.vercel.app/feedbacks')
         .then(response => {
             const feedbacks = response.data;
             const carouselInner = document.querySelector('.carousel-inner');
@@ -145,7 +145,7 @@ function mostraFeedbacks() {
 
 // Construção dinâmica do carrossel para 1 feedback por vez
 function mostraFeedbacksUmPorVez() {
-    axios.get('http://localhost:3000/feedbacks')
+    axios.get('https://json-uai-jobs.vercel.app/feedbacks')
         .then(response => {
             const feedbacks = response.data;
             const carouselInner = document.querySelector('.carousel-inner');
@@ -253,7 +253,7 @@ function ArmazenaFeedback(event) {
     };
 
     // Envia o feedback para o servidor JSON
-    axios.post('http://localhost:3000/feedbacks', feedback) // Substitua pela URL do seu JSON server
+    axios.post('https://json-uai-jobs.vercel.app/feedbacks', feedback) // Substitua pela URL do seu JSON server
         .then(response => {
             console.log('Feedback enviado com sucesso:', response.data);
             alert('Feedback enviado com sucesso!');
@@ -273,8 +273,8 @@ function ArmazenaFeedback(event) {
 //Funções de pagamento
 
 document.addEventListener('DOMContentLoaded', () => {
-    const JSON_SERVER_URL_EMPREGADORES = 'http://localhost:3000/empregadores';
-    const JSON_SERVER_URL_FREELANCERS = 'http://localhost:3000/freelancers';
+    const JSON_SERVER_URL_EMPREGADORES = 'https://json-uai-jobs.vercel.app/empregadores';
+    const JSON_SERVER_URL_FREELANCERS = 'https://json-uai-jobs.vercel.app/freelancers';
 
     // Seleciona o botão de pagamento no modal
     const btnPagamento = document.getElementById('payment-button');
